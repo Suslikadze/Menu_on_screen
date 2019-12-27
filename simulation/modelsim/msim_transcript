@@ -1,0 +1,439 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Menu_on_screen_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen {C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:37:49 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v 
+# -- Compiling module vga_TOP
+# 
+# Top level modules:
+# 	vga_TOP
+# End time: 10:37:49 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen {C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:37:49 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA.v 
+# -- Compiling module vga
+# 
+# Top level modules:
+# 	vga
+# End time: 10:37:49 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen {C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:37:49 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# 
+# Top level modules:
+# 	ROM
+# End time: 10:37:49 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen {C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:37:49 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v 
+# -- Compiling module value_ROM
+# 
+# Top level modules:
+# 	value_ROM
+# End time: 10:37:49 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen {C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Chars V2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:37:49 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Chars V2.v 
+# -- Compiling module chars
+# 
+# Top level modules:
+# 	chars
+# End time: 10:37:49 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen/simulation/modelsim {C:/Users/Siriy/Desktop/Projects/Menu_on_screen/simulation/modelsim/vga_TOP.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:37:49 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen/simulation/modelsim" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/simulation/modelsim/vga_TOP.vt 
+# -- Compiling module vga_TOP_vlg_tst
+# 
+# Top level modules:
+# 	vga_TOP_vlg_tst
+# End time: 10:37:49 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  vga_TOP_vlg_tst
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" vga_TOP_vlg_tst 
+# Start time: 10:37:49 on Dec 27,2019
+# Loading work.vga_TOP_vlg_tst
+# Loading work.vga_TOP
+# Loading work.vga
+# Loading work.ROM
+# Loading work.chars
+# Loading work.value_ROM
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'x0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'y0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+add wave -position end  sim:/vga_TOP_vlg_tst/i1/ROM/window
+add wave -position end  sim:/vga_TOP_vlg_tst/i1/ROM/x0
+add wave -position end  sim:/vga_TOP_vlg_tst/i1/ROM/y0
+add wave -position end  sim:/vga_TOP_vlg_tst/i1/ROM/x
+add wave -position end  sim:/vga_TOP_vlg_tst/i1/ROM/y
+restart
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'x0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'y0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+add wave -position end  sim:/vga_TOP_vlg_tst/i1/vga/valid
+restart
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'x0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'y0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:46:56 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# 
+# Top level modules:
+# 	ROM
+# End time: 10:46:56 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ROM
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'x0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'y0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:00:58 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# 
+# Top level modules:
+# 	ROM
+# End time: 11:00:58 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ROM
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'x0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'y0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:02:06 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# 
+# Top level modules:
+# 	ROM
+# End time: 11:02:07 on Dec 27,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:02:08 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# 
+# Top level modules:
+# 	ROM
+# End time: 11:02:08 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ROM
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'x0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'y0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+restart
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'x0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'y0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+add wave -position end  sim:/vga_TOP_vlg_tst/i1/ROM/valid
+restart
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'x0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (1) does not match connection size (9) for port 'y0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+run -all
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:57:58 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# ** Warning: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(110): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(122): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(134): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	ROM
+# End time: 11:57:58 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+restart
+# Loading work.ROM
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (10) does not match connection size (9) for port 'x0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (10) does not match connection size (9) for port 'y0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:00:08 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# ** Warning: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(110): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(122): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(134): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	ROM
+# End time: 12:00:08 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:00:20 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# ** Warning: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(110): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(122): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(134): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Error: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(23): Initializer must be a constant value or constant expression.
+# End time: 12:00:20 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 3
+# C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog failed.
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:00:31 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# ** Warning: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(110): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(122): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(134): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	ROM
+# End time: 12:00:31 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:04:57 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# 
+# Top level modules:
+# 	ROM
+# End time: 12:04:57 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ROM
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (10) does not match connection size (9) for port 'x0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (10) does not match connection size (9) for port 'y0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+add wave -position end  sim:/vga_TOP_vlg_tst/i1/ROM/pixels
+add wave -position end  sim:/vga_TOP_vlg_tst/i1/ROM/i
+add wave -position end  sim:/vga_TOP_vlg_tst/i1/ROM/j
+restart
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (10) does not match connection size (9) for port 'x0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (10) does not match connection size (9) for port 'y0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:23:57 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# 
+# Top level modules:
+# 	ROM
+# End time: 12:23:57 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ROM
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (10) does not match connection size (9) for port 'x0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (10) does not match connection size (9) for port 'y0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+run -all
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:24:22 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v 
+# -- Compiling module vga_TOP
+# 
+# Top level modules:
+# 	vga_TOP
+# End time: 12:24:22 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:24:27 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA.v 
+# -- Compiling module vga
+# 
+# Top level modules:
+# 	vga
+# End time: 12:24:27 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:24:30 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v 
+# -- Compiling module value_ROM
+# 
+# Top level modules:
+# 	value_ROM
+# End time: 12:24:30 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:24:34 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# 
+# Top level modules:
+# 	ROM
+# End time: 12:24:34 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.vga_TOP
+# Loading work.vga
+# Loading work.ROM
+# Loading work.value_ROM
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (10) does not match connection size (9) for port 'x0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(41): [PCDPC] - Port size (10) does not match connection size (9) for port 'y0'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:25:14 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v 
+# -- Compiling module vga_TOP
+# 
+# Top level modules:
+# 	vga_TOP
+# End time: 12:25:14 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.vga_TOP
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:27:09 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# 
+# Top level modules:
+# 	ROM
+# End time: 12:27:09 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+restart
+# Loading work.ROM
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+run -all
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:29:13 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# 
+# Top level modules:
+# 	ROM
+# End time: 12:29:13 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ROM
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+run -all
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:34:59 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# 
+# Top level modules:
+# 	ROM
+# End time: 12:34:59 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ROM
+# ** Warning: (vsim-3015) C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v(57): [PCDPC] - Port size (10) does not match connection size (6) for port 'some_value'. The port definition is at: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /vga_TOP_vlg_tst/i1/value_ROM File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+run -all
+restart
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:35:41 on Dec 27,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen" C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v 
+# -- Compiling module ROM
+# 
+# Top level modules:
+# 	ROM
+# End time: 12:35:41 on Dec 27,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

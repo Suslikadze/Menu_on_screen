@@ -1,0 +1,13 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen {C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen {C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen {C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen {C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen {C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Chars V2.v}
+

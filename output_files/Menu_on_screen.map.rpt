@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Menu_on_screen
-Thu Dec 26 15:10:01 2019
+Fri Dec 27 12:45:42 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -13,16 +13,21 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "value_ROM:value_ROM"
- 12. Port Connectivity Checks: "ROM:ROM|chars:chars"
- 13. Port Connectivity Checks: "ROM:ROM"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
- 17. Analysis & Synthesis Suppressed Messages
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for Inferred Entity Instance: value_ROM:value_ROM|lpm_divide:Div0
+ 14. Parameter Settings for Inferred Entity Instance: value_ROM:value_ROM|lpm_divide:Mod1
+ 15. Parameter Settings for Inferred Entity Instance: value_ROM:value_ROM|lpm_divide:Mod0
+ 16. Port Connectivity Checks: "value_ROM:value_ROM"
+ 17. Port Connectivity Checks: "ROM:ROM|chars:chars"
+ 18. Port Connectivity Checks: "ROM:ROM"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,15 +53,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 26 15:10:01 2019       ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 27 12:45:42 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Menu_on_screen                              ;
 ; Top-level Entity Name              ; vga_TOP                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 37                                          ;
-;     Total combinational functions  ; 37                                          ;
-;     Dedicated logic registers      ; 21                                          ;
-; Total registers                    ; 21                                          ;
+; Total logic elements               ; 351                                         ;
+;     Total combinational functions  ; 346                                         ;
+;     Dedicated logic registers      ; 73                                          ;
+; Total registers                    ; 73                                          ;
 ; Total pins                         ; 7                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -164,64 +169,101 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                  ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                    ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
-; VGA_TOP.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v        ;         ;
-; VGA.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA.v            ;         ;
-; Text_on_screen.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v ;         ;
-; In_dec.v                         ; yes             ; User Verilog HDL File  ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v         ;         ;
-; Chars V2.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Chars V2.v       ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; VGA_TOP.v                        ; yes             ; User Verilog HDL File        ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v                   ;         ;
+; VGA.v                            ; yes             ; User Verilog HDL File        ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA.v                       ;         ;
+; Text_on_screen.v                 ; yes             ; User Verilog HDL File        ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v            ;         ;
+; In_dec.v                         ; yes             ; User Verilog HDL File        ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v                    ;         ;
+; Chars V2.v                       ; yes             ; User Verilog HDL File        ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Chars V2.v                  ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc      ;         ;
+; db/lpm_divide_sim.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/db/lpm_divide_sim.tdf       ;         ;
+; db/sign_div_unsign_klh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/db/sign_div_unsign_klh.tdf  ;         ;
+; db/alt_u_div_s6f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/db/alt_u_div_s6f.tdf        ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/db/add_sub_7pc.tdf          ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/db/add_sub_8pc.tdf          ;         ;
+; db/lpm_divide_vam.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Siriy/Desktop/Projects/Menu_on_screen/db/lpm_divide_vam.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 37        ;
-;                                             ;           ;
-; Total combinational functions               ; 37        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 9         ;
-;     -- 3 input functions                    ; 5         ;
-;     -- <=2 input functions                  ; 23        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 19        ;
-;     -- arithmetic mode                      ; 18        ;
-;                                             ;           ;
-; Total registers                             ; 21        ;
-;     -- Dedicated logic registers            ; 21        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 7         ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 21        ;
-; Total fan-out                               ; 185       ;
-; Average fan-out                             ; 2.57      ;
-+---------------------------------------------+-----------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 351          ;
+;                                             ;              ;
+; Total combinational functions               ; 346          ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 194          ;
+;     -- 3 input functions                    ; 39           ;
+;     -- <=2 input functions                  ; 113          ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 280          ;
+;     -- arithmetic mode                      ; 66           ;
+;                                             ;              ;
+; Total registers                             ; 73           ;
+;     -- Dedicated logic registers            ; 73           ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 7            ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; ROM:ROM|j[1] ;
+; Maximum fan-out                             ; 63           ;
+; Total fan-out                               ; 1306         ;
+; Average fan-out                             ; 3.02         ;
++---------------------------------------------+--------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |vga_TOP                   ; 37 (0)              ; 21 (0)                    ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |vga_TOP            ; vga_TOP     ; work         ;
-;    |vga:vga|               ; 37 (37)             ; 21 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_TOP|vga:vga    ; vga         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                      ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                          ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |vga_TOP                                  ; 346 (39)            ; 73 (26)                   ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |vga_TOP                                                                                                                     ; vga_TOP             ; work         ;
+;    |ROM:ROM|                              ; 197 (79)            ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_TOP|ROM:ROM                                                                                                             ; ROM                 ; work         ;
+;       |chars:chars|                       ; 118 (118)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_TOP|ROM:ROM|chars:chars                                                                                                 ; chars               ; work         ;
+;    |value_ROM:value_ROM|                  ; 73 (8)              ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_TOP|value_ROM:value_ROM                                                                                                 ; value_ROM           ; work         ;
+;       |lpm_divide:Div0|                   ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_TOP|value_ROM:value_ROM|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_sim:auto_generated|  ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_TOP|value_ROM:value_ROM|lpm_divide:Div0|lpm_divide_sim:auto_generated                                                   ; lpm_divide_sim      ; work         ;
+;             |sign_div_unsign_klh:divider| ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_TOP|value_ROM:value_ROM|lpm_divide:Div0|lpm_divide_sim:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh ; work         ;
+;                |alt_u_div_s6f:divider|    ; 31 (31)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_TOP|value_ROM:value_ROM|lpm_divide:Div0|lpm_divide_sim:auto_generated|sign_div_unsign_klh:divider|alt_u_div_s6f:divider ; alt_u_div_s6f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 34 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_TOP|value_ROM:value_ROM|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_vam:auto_generated|  ; 34 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_TOP|value_ROM:value_ROM|lpm_divide:Mod0|lpm_divide_vam:auto_generated                                                   ; lpm_divide_vam      ; work         ;
+;             |sign_div_unsign_klh:divider| ; 34 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_TOP|value_ROM:value_ROM|lpm_divide:Mod0|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh ; work         ;
+;                |alt_u_div_s6f:divider|    ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_TOP|value_ROM:value_ROM|lpm_divide:Mod0|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider|alt_u_div_s6f:divider ; alt_u_div_s6f       ; work         ;
+;    |vga:vga|                              ; 37 (37)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_TOP|vga:vga                                                                                                             ; vga                 ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; ROM:ROM|char[2]                                    ; ROM:ROM|Mux3        ; yes                    ;
+; ROM:ROM|char[3]                                    ; ROM:ROM|Mux3        ; yes                    ;
+; ROM:ROM|char[1]                                    ; ROM:ROM|Mux3        ; yes                    ;
+; ROM:ROM|char[0]                                    ; ROM:ROM|Mux3        ; yes                    ;
+; ROM:ROM|char[5]                                    ; ROM:ROM|Mux3        ; yes                    ;
+; Number of user-specified and inferred latches = 5  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +--------------------------------------------------------------------------------+
@@ -229,11 +271,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; ROM:ROM|out_bit_R                     ; Stuck at VCC due to stuck port data_in ;
-; ROM:ROM|out_bit_G                     ; Stuck at GND due to stuck port data_in ;
-; ROM:ROM|out_bit_B                     ; Stuck at VCC due to stuck port data_in ;
+; ROM:ROM|out_bit_R                     ; Merged with ROM:ROM|out_bit_B          ;
+; value_ROM:value_ROM|dozens[3]         ; Stuck at GND due to stuck port data_in ;
+; value_ROM:value_ROM|value[7]          ; Stuck at GND due to stuck port data_in ;
 ; Total Number of Removed Registers = 3 ;                                        ;
 +---------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                        ;
++-------------------------------+---------------------------+----------------------------------------+
+; Register name                 ; Reason for Removal        ; Registers Removed due to This Register ;
++-------------------------------+---------------------------+----------------------------------------+
+; value_ROM:value_ROM|dozens[3] ; Stuck at GND              ; value_ROM:value_ROM|value[7]           ;
+;                               ; due to stuck port data_in ;                                        ;
++-------------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -241,24 +293,97 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 21    ;
+; Total registers                              ; 73    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Clock Enable       ; 31    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |vga_TOP|vga:vga|x[9]      ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |vga_TOP|vga:vga|y[9]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |vga_TOP|ROM:ROM|i[2]                 ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |vga_TOP|ROM:ROM|j[1]                 ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |vga_TOP|value_ROM:value_ROM|value[5] ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |vga_TOP|value_ROM:value_ROM|value[1] ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |vga_TOP|vga:vga|x[2]                 ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |vga_TOP|vga:vga|y[7]                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: value_ROM:value_ROM|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                    ;
+; LPM_WIDTHD             ; 4              ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_sim ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: value_ROM:value_ROM|lpm_divide:Mod1 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                    ;
+; LPM_WIDTHD             ; 4              ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_vam ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: value_ROM:value_ROM|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                    ;
+; LPM_WIDTHD             ; 4              ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_vam ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -270,45 +395,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ROM:ROM|chars:chars"                                                                  ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; char   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; pixels ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------+
+; Port Connectivity Checks: "ROM:ROM|chars:chars" ;
++---------+-------+----------+--------------------+
+; Port    ; Type  ; Severity ; Details            ;
++---------+-------+----------+--------------------+
+; char[4] ; Input ; Info     ; Stuck at GND       ;
++---------+-------+----------+--------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ROM:ROM"                                                                                                                                                                                ;
-+--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                                                                                                                                                          ;
-+--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; x0           ; Input ; Warning  ; Input port expression (9 bits) is wider than the input port (1 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; x0[-1]       ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
-; y0           ; Input ; Warning  ; Input port expression (9 bits) is wider than the input port (1 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; y0[-1]       ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
-; line[31..29] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; line[27..25] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; line[23..22] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; line[20..19] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; line[15..13] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; line[11..9]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; line[7..6]   ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; line[1..0]   ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; line[5..4]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
-; line[28]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
-; line[24]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
-; line[21]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
-; line[18]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
-; line[17]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; line[16]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
-; line[12]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
-; line[8]      ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
-; line[3]      ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; line[2]      ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
-+--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------+
+; Port Connectivity Checks: "ROM:ROM"            ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; x0[6..5]     ; Input ; Info     ; Stuck at VCC ;
+; x0[9..7]     ; Input ; Info     ; Stuck at GND ;
+; x0[4..3]     ; Input ; Info     ; Stuck at GND ;
+; x0[1..0]     ; Input ; Info     ; Stuck at GND ;
+; x0[2]        ; Input ; Info     ; Stuck at VCC ;
+; y0[6..5]     ; Input ; Info     ; Stuck at VCC ;
+; y0[9..7]     ; Input ; Info     ; Stuck at GND ;
+; y0[4..3]     ; Input ; Info     ; Stuck at GND ;
+; y0[1..0]     ; Input ; Info     ; Stuck at GND ;
+; y0[2]        ; Input ; Info     ; Stuck at VCC ;
+; line[31..29] ; Input ; Info     ; Stuck at VCC ;
+; line[27..25] ; Input ; Info     ; Stuck at VCC ;
+; line[23..22] ; Input ; Info     ; Stuck at VCC ;
+; line[20..19] ; Input ; Info     ; Stuck at VCC ;
+; line[15..13] ; Input ; Info     ; Stuck at VCC ;
+; line[11..9]  ; Input ; Info     ; Stuck at VCC ;
+; line[7..6]   ; Input ; Info     ; Stuck at VCC ;
+; line[1..0]   ; Input ; Info     ; Stuck at VCC ;
+; line[5..4]   ; Input ; Info     ; Stuck at GND ;
+; line[28]     ; Input ; Info     ; Stuck at GND ;
+; line[24]     ; Input ; Info     ; Stuck at GND ;
+; line[21]     ; Input ; Info     ; Stuck at GND ;
+; line[18]     ; Input ; Info     ; Stuck at GND ;
+; line[17]     ; Input ; Info     ; Stuck at VCC ;
+; line[16]     ; Input ; Info     ; Stuck at GND ;
+; line[12]     ; Input ; Info     ; Stuck at GND ;
+; line[8]      ; Input ; Info     ; Stuck at GND ;
+; line[3]      ; Input ; Info     ; Stuck at VCC ;
+; line[2]      ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -317,21 +447,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 7                           ;
-; cycloneiii_ff         ; 21                          ;
+; cycloneiii_ff         ; 73                          ;
+;     ENA               ; 11                          ;
 ;     ENA SCLR          ; 20                          ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 39                          ;
-;     arith             ; 18                          ;
-;         2 data inputs ; 18                          ;
-;     normal            ; 21                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 9                           ;
+;     plain             ; 42                          ;
+; cycloneiii_lcell_comb ; 346                         ;
+;     arith             ; 66                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 48                          ;
+;         3 data inputs ; 16                          ;
+;     normal            ; 280                         ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 49                          ;
+;         3 data inputs ; 23                          ;
+;         4 data inputs ; 194                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.05                        ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 5.34                        ;
 +-----------------------+-----------------------------+
 
 
@@ -340,7 +473,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -350,7 +483,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Dec 26 15:09:52 2019
+    Info: Processing started: Fri Dec 27 12:45:31 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Menu_on_screen -c Menu_on_screen
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -369,18 +502,19 @@ Warning (10230): Verilog HDL assignment warning at VGA_TOP.v(77): truncated valu
 Warning (10230): Verilog HDL assignment warning at VGA_TOP.v(80): truncated value with size 32 to match size of target (6) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v Line: 80
 Info (12128): Elaborating entity "vga" for hierarchy "vga:vga" File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v Line: 39
 Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM" File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v Line: 55
-Warning (10858): Verilog HDL warning at Text_on_screen.v(25): object valid used but never assigned File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 25
-Warning (10270): Verilog HDL Case Statement warning at Text_on_screen.v(57): incomplete case statement has no default case item File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 57
-Info (10264): Verilog HDL Case Statement information at Text_on_screen.v(57): all case item expressions in this case statement are onehot File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 57
-Warning (10240): Verilog HDL Always Construct warning at Text_on_screen.v(57): inferring latch(es) for variable "char", which holds its previous value in one or more paths through the always construct File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 57
-Warning (10230): Verilog HDL assignment warning at Text_on_screen.v(127): truncated value with size 32 to match size of target (4) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 127
-Warning (10030): Net "valid" at Text_on_screen.v(25) has no driver or initial value, using a default initial value '0' File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 25
-Info (10041): Inferred latch for "char[0]" at Text_on_screen.v(57) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 57
-Info (10041): Inferred latch for "char[1]" at Text_on_screen.v(57) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 57
-Info (10041): Inferred latch for "char[2]" at Text_on_screen.v(57) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 57
-Info (10041): Inferred latch for "char[3]" at Text_on_screen.v(57) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 57
-Info (10041): Inferred latch for "char[4]" at Text_on_screen.v(57) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 57
-Info (10041): Inferred latch for "char[5]" at Text_on_screen.v(57) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 57
+Warning (10230): Verilog HDL assignment warning at Text_on_screen.v(23): truncated value with size 32 to match size of target (1) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 23
+Warning (10230): Verilog HDL assignment warning at Text_on_screen.v(84): truncated value with size 7 to match size of target (6) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 84
+Warning (10270): Verilog HDL Case Statement warning at Text_on_screen.v(56): incomplete case statement has no default case item File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 56
+Info (10264): Verilog HDL Case Statement information at Text_on_screen.v(56): all case item expressions in this case statement are onehot File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 56
+Warning (10240): Verilog HDL Always Construct warning at Text_on_screen.v(56): inferring latch(es) for variable "char", which holds its previous value in one or more paths through the always construct File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 56
+Warning (10230): Verilog HDL assignment warning at Text_on_screen.v(177): truncated value with size 32 to match size of target (3) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 177
+Warning (10230): Verilog HDL assignment warning at Text_on_screen.v(187): truncated value with size 32 to match size of target (3) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 187
+Info (10041): Inferred latch for "char[0]" at Text_on_screen.v(56) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 56
+Info (10041): Inferred latch for "char[1]" at Text_on_screen.v(56) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 56
+Info (10041): Inferred latch for "char[2]" at Text_on_screen.v(56) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 56
+Info (10041): Inferred latch for "char[3]" at Text_on_screen.v(56) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 56
+Info (10041): Inferred latch for "char[4]" at Text_on_screen.v(56) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 56
+Info (10041): Inferred latch for "char[5]" at Text_on_screen.v(56) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 56
 Info (12128): Elaborating entity "chars" for hierarchy "ROM:ROM|chars:chars" File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 38
 Info (12128): Elaborating entity "value_ROM" for hierarchy "value_ROM:value_ROM" File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v Line: 62
 Warning (10230): Verilog HDL assignment warning at In_dec.v(14): truncated value with size 12 to match size of target (8) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v Line: 14
@@ -389,24 +523,64 @@ Warning (10230): Verilog HDL assignment warning at In_dec.v(18): truncated value
 Warning (10230): Verilog HDL assignment warning at In_dec.v(19): truncated value with size 32 to match size of target (4) File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v Line: 19
 Warning (10272): Verilog HDL Case Statement warning at In_dec.v(44): case item expression covers a value already covered by a previous case item File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v Line: 44
 Warning (10272): Verilog HDL Case Statement warning at In_dec.v(58): case item expression covers a value already covered by a previous case item File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v Line: 58
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "R" is stuck at VCC File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v Line: 5
-    Warning (13410): Pin "G" is stuck at GND File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v Line: 6
-    Warning (13410): Pin "B" is stuck at VCC File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v Line: 7
+Info (278001): Inferred 3 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "value_ROM:value_ROM|Div0" File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v Line: 18
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "value_ROM:value_ROM|Mod1" File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v Line: 18
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "value_ROM:value_ROM|Mod0" File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v Line: 17
+Info (12130): Elaborated megafunction instantiation "value_ROM:value_ROM|lpm_divide:Div0" File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v Line: 18
+Info (12133): Instantiated megafunction "value_ROM:value_ROM|lpm_divide:Div0" with the following parameter: File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v Line: 18
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_sim.tdf
+    Info (12023): Found entity 1: lpm_divide_sim File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/db/lpm_divide_sim.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_klh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_klh File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/db/sign_div_unsign_klh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_s6f.tdf
+    Info (12023): Found entity 1: alt_u_div_s6f File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/db/alt_u_div_s6f.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/db/add_sub_7pc.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/db/add_sub_8pc.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "value_ROM:value_ROM|lpm_divide:Mod1" File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v Line: 18
+Info (12133): Instantiated megafunction "value_ROM:value_ROM|lpm_divide:Mod1" with the following parameter: File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v Line: 18
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vam.tdf
+    Info (12023): Found entity 1: lpm_divide_vam File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/db/lpm_divide_vam.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "value_ROM:value_ROM|lpm_divide:Mod0" File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v Line: 17
+Info (12133): Instantiated megafunction "value_ROM:value_ROM|lpm_divide:Mod0" with the following parameter: File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v Line: 17
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch ROM:ROM|char[2] has unsafe behavior File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 56
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ROM:ROM|valid[0] File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 43
+Warning (13012): Latch ROM:ROM|char[3] has unsafe behavior File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 56
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ROM:ROM|valid[0] File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 43
+Warning (13012): Latch ROM:ROM|char[1] has unsafe behavior File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 56
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ROM:ROM|valid[0] File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 43
+Warning (13012): Latch ROM:ROM|char[0] has unsafe behavior File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 56
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ROM:ROM|valid[0] File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 43
+Warning (13012): Latch ROM:ROM|char[5] has unsafe behavior File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 56
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ROM:ROM|valid[0] File: C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v Line: 43
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/Siriy/Desktop/Projects/Menu_on_screen/output_files/Menu_on_screen.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 359 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 37 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4786 megabytes
-    Info: Processing ended: Thu Dec 26 15:10:01 2019
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+    Info (21061): Implemented 352 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4795 megabytes
+    Info: Processing ended: Fri Dec 27 12:45:42 2019
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+

@@ -1,0 +1,146 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Siriy/Desktop/Projects/Menu_on_screen/simulation/modelsim
+vchars
+Z1 !s110 1577432269
+!i10b 1
+!s100 ;]1Y9SWL<A^Fd6Zd@Y^2k2
+I8k]?e]aA25G_Z0o8S1UA33
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1577361133
+8C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Chars V2.v
+FC:/Users/Siriy/Desktop/Projects/Menu_on_screen/Chars V2.v
+L0 2
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1577432269.000000
+!s107 C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Chars V2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen|C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Chars V2.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen
+Z7 tCvgOpt 0
+vROM
+!s110 1577439341
+!i10b 1
+!s100 ZcPD8ZjO?iQ36=PiKm^mj1
+ILP6K;lQGUSg_UzjahoY1P1
+R2
+R0
+w1577439333
+8C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+FC:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1577439341.000000
+!s107 C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen|C:/Users/Siriy/Desktop/Projects/Menu_on_screen/Text_on_screen.v|
+!i113 1
+R5
+R6
+R7
+n@r@o@m
+vvalue_ROM
+!s110 1577438670
+!i10b 1
+!s100 O9U_QiY=Sme:4HE9=ib3h3
+I?TQVhiFZLfA^3j@>4OaAa3
+R2
+R0
+w1577361142
+8C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+FC:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1577438670.000000
+!s107 C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen|C:/Users/Siriy/Desktop/Projects/Menu_on_screen/In_dec.v|
+!i113 1
+R5
+R6
+R7
+nvalue_@r@o@m
+vvga
+!s110 1577438667
+!i10b 1
+!s100 Z4kGUCN@1n]F=0j4>1D1:3
+I=]S;9O9kCnLKg:l`SjRad3
+R2
+R0
+w1577361793
+8C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA.v
+FC:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1577438667.000000
+!s107 C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen|C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA.v|
+!i113 1
+R5
+R6
+R7
+vvga_TOP
+!s110 1577438714
+!i10b 1
+!s100 ?d<C?kldE]bVUn@ZIaT^=1
+I<NU0GNzP<TCg5:nd4M4lz3
+R2
+R0
+w1577438711
+8C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v
+FC:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1577438714.000000
+!s107 C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen|C:/Users/Siriy/Desktop/Projects/Menu_on_screen/VGA_TOP.v|
+!i113 1
+R5
+R6
+R7
+nvga_@t@o@p
+vvga_TOP_vlg_tst
+R1
+!i10b 1
+!s100 V:D7Ve^=KS?YJ@2W[l[H<3
+ImYXfRMQ8do7gK>GA:jod30
+R2
+R0
+w1577432224
+8C:/Users/Siriy/Desktop/Projects/Menu_on_screen/simulation/modelsim/vga_TOP.vt
+FC:/Users/Siriy/Desktop/Projects/Menu_on_screen/simulation/modelsim/vga_TOP.vt
+L0 28
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Siriy/Desktop/Projects/Menu_on_screen/simulation/modelsim/vga_TOP.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen/simulation/modelsim|C:/Users/Siriy/Desktop/Projects/Menu_on_screen/simulation/modelsim/vga_TOP.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/Siriy/Desktop/Projects/Menu_on_screen/simulation/modelsim
+R7
+nvga_@t@o@p_vlg_tst

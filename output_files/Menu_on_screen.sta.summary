@@ -2,40 +2,184 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'vga:vga|newframe'
+Slack : -5.940
+TNS   : -37.467
+
+Type  : Slow 1200mV 85C Model Setup 'vga:vga|clk25'
+Slack : -5.019
+TNS   : -52.169
+
+Type  : Slow 1200mV 85C Model Setup 'ROM:ROM|valid[0]'
+Slack : -4.920
+TNS   : -21.019
+
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -1.481
-TNS   : -28.579
+Slack : -1.894
+TNS   : -39.608
+
+Type  : Slow 1200mV 85C Model Setup 'vga:vga|newline'
+Slack : -1.620
+TNS   : -3.893
+
+Type  : Slow 1200mV 85C Model Hold 'vga:vga|clk25'
+Slack : 0.321
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'vga:vga|newline'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ROM:ROM|valid[0]'
+Slack : 0.349
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'vga:vga|newframe'
+Slack : 0.357
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.490
+Slack : 0.573
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -24.000
+TNS   : -26.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'vga:vga|clk25'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'vga:vga|newframe'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'vga:vga|newline'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ROM:ROM|valid[0]'
+Slack : 0.395
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'vga:vga|newframe'
+Slack : -5.191
+TNS   : -32.080
+
+Type  : Slow 1200mV 0C Model Setup 'vga:vga|clk25'
+Slack : -4.399
+TNS   : -43.087
+
+Type  : Slow 1200mV 0C Model Setup 'ROM:ROM|valid[0]'
+Slack : -4.363
+TNS   : -18.808
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -1.247
-TNS   : -23.858
+Slack : -1.608
+TNS   : -33.284
+
+Type  : Slow 1200mV 0C Model Setup 'vga:vga|newline'
+Slack : -1.345
+TNS   : -3.203
+
+Type  : Slow 1200mV 0C Model Hold 'vga:vga|newline'
+Slack : 0.301
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'vga:vga|newframe'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'vga:vga|clk25'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ROM:ROM|valid[0]'
+Slack : 0.349
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.431
+Slack : 0.515
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -24.000
+TNS   : -26.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'vga:vga|clk25'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'vga:vga|newframe'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'vga:vga|newline'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ROM:ROM|valid[0]'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'vga:vga|newframe'
+Slack : -2.883
+TNS   : -15.662
+
+Type  : Fast 1200mV 0C Model Setup 'vga:vga|clk25'
+Slack : -2.684
+TNS   : -15.816
+
+Type  : Fast 1200mV 0C Model Setup 'ROM:ROM|valid[0]'
+Slack : -2.556
+TNS   : -10.600
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.359
-TNS   : -6.470
+Slack : -0.839
+TNS   : -14.691
+
+Type  : Fast 1200mV 0C Model Setup 'vga:vga|newline'
+Slack : -0.488
+TNS   : -0.854
+
+Type  : Fast 1200mV 0C Model Hold 'ROM:ROM|valid[0]'
+Slack : 0.099
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'vga:vga|newline'
+Slack : 0.125
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'vga:vga|clk25'
+Slack : 0.128
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'vga:vga|newframe'
+Slack : 0.186
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.266
+Slack : 0.307
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -25.482
+TNS   : -27.254
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'vga:vga|clk25'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'vga:vga|newframe'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'vga:vga|newline'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ROM:ROM|valid[0]'
+Slack : 0.370
+TNS   : 0.000
 
 ------------------------------------------------------------
